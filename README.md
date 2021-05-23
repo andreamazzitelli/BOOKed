@@ -8,7 +8,7 @@
     <li>
         <p><b>ARCHITETTURA DI RIFERIMENTO E TECNOLOGIE UTILIZZATE</b></p>
         <p>Il progetto è basato sull'idea di aggregazione di microservizi. Per raggiungere questo obiettivo abbiamo utilizzato docker (in particolare docker compose) sfruttando più container per inizializzare una serie di servizi base seperati che poi interagiscono tra loro per fornire poi il servizio finale.
-            <img src= "/home/lassi/Desktop/Progetto/Docker/PRINCIPALE/Schema_Architettura.png" width="75%", style="margin-left: 15%;">
+            <img src= "Schema_Architettura.png" width="75%", style="margin-left: 15%;">
         </p>
     </li>
     <li>
@@ -96,5 +96,5 @@
     </li>
 </ol>
 <p>
-    <img src= "/home/lassi/Desktop/Progetto/Docker/PRINCIPALE/gerarchia_docker-compose.png" width="50%", style="margin-left: 25%;">
+    <img src= "gerarchia_docker-compose.png" width="50%", style="margin-left: 25%;">
 </p>
