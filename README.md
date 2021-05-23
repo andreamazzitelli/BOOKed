@@ -96,5 +96,5 @@
     </li>
 </ol>
 <p>
-    <img src= "gerarchia_docker-compose.png" width="50%", style="margin-left: 25%;">
+    <img src= "gerarchia_docker-compose.png" width="75%", style="margin-left: 25%;">
 </p>
