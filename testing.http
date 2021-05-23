@@ -1,0 +1,74 @@
+####################################################################
+# TEST per API specific
+####################################################################
+
+### POST /specific con SUCCESS
+POST https://localhost:3000/specific HTTP/1.1
+Content-Type: application/json
+
+{
+  "address": "Piazzale Aldo Moro Roma",
+  "vehicle": "car",
+  "city": "roma"
+}
+
+
+### POST /specific con ERRORE
+POST https://localhost:3000/specific HTTP/1.1
+Content-Type: application/json
+
+{
+  "address": "azescdtijnkmoasl"
+}
+
+####################################################################
+# TEST per API general
+####################################################################
+
+### GET /general con SUCCESS
+GET https://localhost:3000/general?address=piazzale+aldo+moro+roma
+
+### GET /general con SUCCESS e limitazione
+GET https://localhost:3000/general?address=piazzale+aldo+moro+roma&tot=3
+
+### GET /general con ERRORE
+GET https://localhost:3000/general?address=aszxdjkns
+
+
+####################################################################
+# TEST per API getLog
+####################################################################
+
+### GET /getLog senza Attributi
+GET https://localhost:3000/getLog?masterkey=password
+
+### GET /getLog con SUCCESS solo con la data
+GET https://localhost:3000/getLog?masterkey=password&data=23/5/2021
+
+###GET /getLog con SUCCES con data e ora di inizio
+GET https://localhost:3000/getLog?masterkey=password&data=23/5/2021&da=10:00:00
+
+###GET /getLog con SUCCES con data e ora di fine 
+GET https://localhost:3000/getLog?masterkey=password&data=23/5/2021&a=17:00:00
+
+###GET /getLog con SUCCES con data e ora di fine e di inizio
+GET https://localhost:3000/getLog?masterkey=password&data=23/5/2021&da=10:00:00&a=17:00:00
+
+
+####################################################################
+# ALTRI SERVIZI INTERNI OFFERTI
+####################################################################
+
+### POST /sendmail - INSERIRE LA MAIL A CUI SI VUOLE RICEVERELA MAIL DI TEST
+POST https://localhost:3000/sendmail HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "idtest",
+  "data": "14/05/2021",
+  "indirizzo": "Piazzale Aldo Moro",
+  "autore": "Tizio Caio",
+  "nomeLuogo": "Biblioteca",
+  "nomeLibro": "Titolo",
+  "email": ""
+}
