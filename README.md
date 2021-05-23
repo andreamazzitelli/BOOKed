@@ -66,9 +66,9 @@
             </br>
             <code>docker-compose up -d</code>
             </br>
-            
+        </p>
+        <p>  
             Una volta che il comando è terminato i vari container si staranno ancora inizializzando quindi si consigli di attendere per un minuto o due, quindi si può utilizzare l'applicazione seguendo i passi indicati in "ISTRUZIONI PER I TEST"
-
             <b>N.B.</b>
             Poichè il certificato utilizzato per il funzionamento di ssl è self-signed potrebbe essere necessario autorizzare l'accesso sia ad nginx sia al server node.
             Per il corretto funzionamento si consiglia di visitare e autorizzare l'accesso ai segurnti link 
