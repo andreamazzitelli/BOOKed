@@ -68,7 +68,7 @@
             </br>
         </p>
         <p>  
-            Una volta che il comando è terminato i vari container si staranno ancora inizializzando quindi si consigli di attendere per un minuto o due, quindi si può utilizzare l'applicazione seguendo i passi indicati in "ISTRUZIONI PER I TEST"
+            Una volta che il comando è terminato i vari container si staranno ancora inizializzando quindi si consiglia di attendere per un minuto o due, quindi si può utilizzare l'applicazione seguendo i passi indicati in "ISTRUZIONI PER I TEST"
             </br>
             <b>N.B.</b>
             Poichè il certificato utilizzato per il funzionamento di ssl è self-signed potrebbe essere necessario autorizzare l'accesso sia ad nginx sia al server node.
