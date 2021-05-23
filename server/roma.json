@@ -1,0 +1,70 @@
+{
+    "lista": [{
+            "name": "Biblioteca Flaminia",
+            "lat": "41.923580",
+            "long": "12.470486",
+            "via": "Via Cesare Fracassini, 9"
+        },
+        {
+            "name": "Biblioteca Centrale per Ragazzi",
+            "lat": "41.893419",
+            "long": "12.473138",
+            "via": "Via di S. Paolo alla Regola, 15/18"
+        },
+        {
+            "name": "Biblioteca Valle Aurelia",
+            "lat": "41.905251",
+            "long": "12.437141",
+            "via": "Viale di Valle Aurelia, 129"
+        },
+        {
+            "name": "Biblioteca Europea",
+            "lat": "41.913385",
+            "long": "12.498643",
+            "via": "Via Savoia, 13/15"
+        },
+        {
+            "name": "Biblioteca Giordano Bruno",
+            "lat": "41.911445",
+            "long": "12.452416",
+            "via": "Via Giordano Bruno, 47"
+        },
+        {
+            "name": "Biblioteca Casa della Memoria e della Storia",
+            "lat": "41.894206",
+            "long": "12.463663",
+            "via": "Via di S. Francesco di Sales, 5"
+        },
+        {
+            "name": "Biblioteca Cornelia",
+            "lat": "41.908987",
+            "long": "12.397261",
+            "via": "Via Cornelia, 45"
+        },
+        {
+            "name": "Biblioteca Nelson Mandela",
+            "lat": "41.886962",
+            "long": "12.511200",
+            "via": "Via la Spezia, 21"
+        },
+        {
+            "name": "Biblioteca Guglielmo Marconi",
+            "lat": "41.863417",
+            "long": "12.467057",
+            "via": "Via Gerolamo Cardano, 135"
+        },
+        {
+            "name": "Biblioteca Villa Leopardi",
+            "lat": "41.929531",
+            "long": "12.530592",
+            "via": "Via Makallè"
+        },
+        {
+            "name": "Biblioteca Ennio Flaiano",
+            "lat": "41.950002",
+            "long": "12.542680",
+            "via": "Via Monte Ruggero, 39"
+        }
+        
+    ]
+}

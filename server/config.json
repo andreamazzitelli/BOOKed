@@ -1,0 +1,8 @@
+{
+    "NUM_OF_PLACES": 5,
+    "default_city": "roma",
+    "list_of_cities": ["roma"],
+    "DB_NAME": "CouchDB",
+    "MAP_SERVICES_NAME": "GraphHopper",
+    "chiave": "password"
+}

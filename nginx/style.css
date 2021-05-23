@@ -1,0 +1,281 @@
+/*
+Sfondo con immagine ma al momento è uno SBOCCO.
+Si vedrà più in là in caso.
+body {
+    font-family: Economica, sans-serif;
+    background: url('imgs/sfondo.png');
+    background-position: center;
+    background-repeat: repeat;
+}*/
+
+
+/*
+    background-color: rgba(20, 50, 125, 1); BLU SCURO
+    background-color: rgba(228, 233, 242, 1); BLU CHIARO SFONDO
+    */
+
+body {
+    background-color: rgba(228, 233, 242, 1);
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body.home {
+    overflow-y: hidden;
+}
+
+body section {
+    background: white;
+    padding: 1rem 0;
+    margin: 3rem 0;
+    border: .15rem solid rgba(20, 50, 125, 1);
+    border-radius: 2rem;
+    position: relative;
+}
+
+body section div.row h3 {
+    background-color: rgba(20, 50, 125, 1);
+    /*background: #1384B5;*/
+    position: absolute;
+    top: -1.35rem;
+    text-align: center;
+    padding: .35rem 0;
+    width: 25%;
+    color: white;
+    left: 2.5rem;
+    border-radius: .75rem;
+    font-size: 1.3rem;
+}
+
+section.first {
+    height: 100vh;
+    margin: 0;
+    padding: 15vh 5rem 0 5rem;
+    border: 0;
+    border-radius: 0;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    background: -webkit-gradient(linear, 82% 100%, 81% 1%, from(#14327D), to(#24469A))
+}
+
+section.first div.row div img {
+    border-radius: 1rem;
+    -moz-box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
+}
+
+section.first div.row div div.card {
+    font-size: 1.05rem;
+}
+
+#start-button {
+    font-size: 1.5rem;
+    border-radius: .75rem;
+    margin-top: 5vh;
+    margin-left: -150vw;
+}
+
+#start-button:hover {
+    color: rgba(20, 50, 125, 1)
+}
+
+div#appiglio {
+    position: absolute;
+    bottom: 6vh;
+    left: 0;
+    width: 100%;
+    height: 1vh;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: transparent;
+}
+
+section#how-it-works {
+    margin-top: 10vh;
+}
+
+nav {
+    background: transparent;
+}
+
+.nav-on-scroll {
+    background: rgba(20, 50, 125, 1);
+    border-bottom: .15rem solid white;
+    /* Box shadow per dire ma forse si può anche toglie */
+    -moz-box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler {
+    color: white !important;
+}
+
+nav ul li a,
+nav div h1 a {
+    color: white !important
+}
+
+nav ul li a.active {
+    color: #E57C21 !important;
+}
+
+nav h1 {
+    font-size: 1.75rem !important;
+}
+
+.card-header h2 {
+    margin-bottom: 0 !important;
+}
+
+h2 span {
+    font-size: 1.35rem;
+    padding-left: .5rem;
+}
+
+h2 br {
+    display: none
+}
+
+button.full-width,
+a.full-width {
+    width: 100%;
+}
+
+.success-page a.full-width {
+    font-size: 1.25rem;
+}
+
+#centra_utente {
+    background-color: white;
+    background-image: url(imgs/center.png);
+    background-size: 30px 30px;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+}
+
+.leaflet-control-layers-toggle {
+    background-image: url(imgs/filter.png) !important;
+    background-size: 75% 75% !important;
+    width: 2.75rem;
+    height: 2.75rem;
+    cursor: pointer;
+}
+
+section.leaflet-control-layers-list {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.leaflet-control-layers-expanded {
+    font-size: 1.25em !important;
+    padding: .6em !important;
+}
+
+#event {
+    font-size: 1.5em;
+}
+
+#contenuti {
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.leaflet-popup-content div i.flaticon-distance,
+.leaflet-popup-content div i.flaticon-car,
+.leaflet-popup-content div i.flaticon-foot,
+.leaflet-popup-content div i.flaticon-bike,
+#contenuti_con_icon {
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+a#prenota_link {
+    color: white;
+    text-decoration: none;
+    width: 100%
+}
+
+.progress {
+    height: 7.5vh;
+    width: 100%;
+    border-radius: 1.25rem 1.25rem 0 0;
+    font-size: 1.2rem;
+    border: .15rem solid #0d6efd;
+    border-bottom: 0;
+}
+
+ol#progress-ol {
+    border: .15rem solid #0d6efd;
+    border-top: 0;
+    margin-bottom: 3vh;
+}
+
+ol#progress-ol li span {
+    font-size: 1rem;
+}
+
+ol#progress-ol li {
+    display: none;
+}
+
+#hidden_card {
+    display: none;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.modal-dialog {
+    max-width: 60vw;
+}
+
+footer {
+    color: white;
+    padding: 5vh 5rem;
+    background: -webkit-gradient(linear, 82% 100%, 81% 1%, from(#24469A), to(#14327D))
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* AGGIUSTA STILI PER I CELLULARI */
+
+@media screen and (max-width:767px) {
+    body {
+        overflow-y: scroll !important;
+    }
+    h2 span {
+        padding-left: 0;
+    }
+    h2 br {
+        display: block
+    }
+    .modal-dialog {
+        max-width: 100vw;
+    }
+    section div.row h3 {
+        width: 70% !important
+    }
+    section.first {
+        height: auto;
+        padding: 0;
+        padding: 10vh 0;
+    }
+    nav {
+        background: rgba(20, 50, 125, 1);
+        border-bottom: .15rem solid white;
+    }
+}

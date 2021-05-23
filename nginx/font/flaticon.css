@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?14c5a18b90a56d46b8905e0bafcc5020") format("truetype"), url("./flaticon.woff?14c5a18b90a56d46b8905e0bafcc5020") format("woff"), url("./flaticon.woff2?14c5a18b90a56d46b8905e0bafcc5020") format("woff2"), url("./flaticon.eot?14c5a18b90a56d46b8905e0bafcc5020#iefix") format("embedded-opentype"), url("./flaticon.svg?14c5a18b90a56d46b8905e0bafcc5020#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-annulla:before {
+    content: "\f101";
+}
+
+.flaticon-bike:before {
+    content: "\f102";
+}
+
+.flaticon-books:before {
+    content: "\f103";
+}
+
+.flaticon-calendar:before {
+    content: "\f104";
+}
+
+.flaticon-cancel:before {
+    content: "\f105";
+}
+
+.flaticon-car:before {
+    content: "\f106";
+}
+
+.flaticon-confirm:before {
+    content: "\f107";
+}
+
+.flaticon-distance:before {
+    content: "\f108";
+}
+
+.flaticon-email:before {
+    content: "\f109";
+}
+
+.flaticon-foot:before {
+    content: "\f10a";
+}
+
+.flaticon-googlecal:before {
+    content: "\f10b";
+}
+
+.flaticon-pdf:before {
+    content: "\f10c";
+}
+
+.flaticon-posizione:before {
+    content: "\f10d";
+}
+
+.flaticon-prenota:before {
+    content: "\f10e";
+}
+
+.flaticon-settings:before {
+    content: "\f10f";
+}
+
+.flaticon-successo:before {
+    content: "\f110";
+}

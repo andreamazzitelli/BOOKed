@@ -1,0 +1,18 @@
+8:36:06 AM - [RICHIESTA SPECIFIC] Da ::ffff:172.20.0.1 con i sequenti parametri: Via Oslavia 37 Roma, car, roma;
+8:36:06 AM - [RICHIESTA-GENERAL] Da ::ffff:127.0.0.1 con i sequenti parametri: Via Oslavia 37 Roma, undefined;
+8:36:06 AM - [SUCCESS-GENERAL]Elaborazione e Invio Dati completato;
+8:36:06 AM - [SUCCESS-SPECIFIC] Richiesta da ::ffff:172.20.0.1 completata con succeso;
+8:37:14 AM - [MAIL] Richista di Invio Mail da::ffff:172.20.0.1 per l'ID:08c9cbd3b5238670c2aa09015d11cf83;
+8:37:16 AM - [MAIL-SUCCESS] Inviata con successo Mail per l'ID:08c9cbd3b5238670c2aa09015d11cf83;
+10:31:45 AM - [RICHIESTA SPECIFIC] Da ::ffff:172.20.0.1 con i sequenti parametri: Via Oslavia 37 Roma, car, roma;
+10:31:45 AM - [RICHIESTA-GENERAL] Da ::ffff:127.0.0.1 con i sequenti parametri: Via Oslavia 37 Roma, undefined;
+10:31:45 AM - [SUCCESS-GENERAL]Elaborazione e Invio Dati completato;
+10:31:45 AM - [SUCCESS-SPECIFIC] Richiesta da ::ffff:172.20.0.1 completata con succeso;
+10:32:53 AM - [MAIL] Richista di Invio Mail da::ffff:172.20.0.1 per l'ID:b5c6acc52bdec818bae598310a80a27f;
+10:32:55 AM - [MAIL-SUCCESS] Inviata con successo Mail per l'ID:b5c6acc52bdec818bae598310a80a27f;
+2:10:09 PM - [RICHIESTA SPECIFIC] Da ::ffff:172.20.0.1 con i sequenti parametri: Via Oslavia 37 Roma, car, roma;
+2:10:09 PM - [RICHIESTA-GENERAL] Da ::ffff:127.0.0.1 con i sequenti parametri: Via Oslavia 37 Roma, undefined;
+2:10:09 PM - [SUCCESS-GENERAL]Elaborazione e Invio Dati completato;
+2:10:09 PM - [SUCCESS-SPECIFIC] Richiesta da ::ffff:172.20.0.1 completata con succeso;
+2:11:10 PM - [MAIL] Richista di Invio Mail da::ffff:172.20.0.1 per l'ID:28b8982c2600b1bf23631a942b467cbb;
+2:11:11 PM - [MAIL-SUCCESS] Inviata con successo Mail per l'ID:28b8982c2600b1bf23631a942b467cbb;

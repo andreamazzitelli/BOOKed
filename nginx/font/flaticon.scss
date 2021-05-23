@@ -1,0 +1,89 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?14c5a18b90a56d46b8905e0bafcc5020") format("truetype"),
+url("./flaticon.woff?14c5a18b90a56d46b8905e0bafcc5020") format("woff"),
+url("./flaticon.woff2?14c5a18b90a56d46b8905e0bafcc5020") format("woff2"),
+url("./flaticon.eot?14c5a18b90a56d46b8905e0bafcc5020#iefix") format("embedded-opentype"),
+url("./flaticon.svg?14c5a18b90a56d46b8905e0bafcc5020#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "annulla": "\f101",
+    "bike": "\f102",
+    "books": "\f103",
+    "calendar": "\f104",
+    "cancel": "\f105",
+    "car": "\f106",
+    "confirm": "\f107",
+    "distance": "\f108",
+    "email": "\f109",
+    "foot": "\f10a",
+    "googlecal": "\f10b",
+    "pdf": "\f10c",
+    "posizione": "\f10d",
+    "prenota": "\f10e",
+    "settings": "\f10f",
+    "successo": "\f110",
+);
+
+.flaticon-annulla:before {
+    content: map-get($flaticon-map, "annulla");
+}
+.flaticon-bike:before {
+    content: map-get($flaticon-map, "bike");
+}
+.flaticon-books:before {
+    content: map-get($flaticon-map, "books");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
+.flaticon-cancel:before {
+    content: map-get($flaticon-map, "cancel");
+}
+.flaticon-car:before {
+    content: map-get($flaticon-map, "car");
+}
+.flaticon-confirm:before {
+    content: map-get($flaticon-map, "confirm");
+}
+.flaticon-distance:before {
+    content: map-get($flaticon-map, "distance");
+}
+.flaticon-email:before {
+    content: map-get($flaticon-map, "email");
+}
+.flaticon-foot:before {
+    content: map-get($flaticon-map, "foot");
+}
+.flaticon-googlecal:before {
+    content: map-get($flaticon-map, "googlecal");
+}
+.flaticon-pdf:before {
+    content: map-get($flaticon-map, "pdf");
+}
+.flaticon-posizione:before {
+    content: map-get($flaticon-map, "posizione");
+}
+.flaticon-prenota:before {
+    content: map-get($flaticon-map, "prenota");
+}
+.flaticon-settings:before {
+    content: map-get($flaticon-map, "settings");
+}
+.flaticon-successo:before {
+    content: map-get($flaticon-map, "successo");
+}
