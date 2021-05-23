@@ -89,7 +89,7 @@
                     Per le API: fare chiamate di test tramite la pagina di documentazione di APIDOC
                 </li>
                 <li>
-                    Effetturare chiamate da VSCode tramite l'apposito file "testing.http"
+                    Effetturare chiamate da VSCode tramite l'apposito file "testing.http" (è necessaria l'estenzione RestClient)
                 </li>
             </ul>
         </p>
