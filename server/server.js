@@ -688,20 +688,22 @@ app.get('/getLog', function(request, response) {
     daSeconds = getSeconds(da);
     aSeconds = getSeconds(a);
 
-    /*     console.log(daSeconds);
-        console.log(aSeconds); */
+        /*     console.log(daSeconds);
+        console.log(aSeconds); */ 
 
     if (typeof data == 'undefined') {
         d = new Date()
         data = d.toLocaleDateString();
+        data = data.split("/").reverse();
+        data = data.join('_');
     }
-
-    data = data.split("/").reverse();
-    var t = [data[1], data[2]].reverse();
-    data[1] = t[0];
-    data[2] = t[1];
-    data = data.join('_');
-
+    else{
+        data = data.split("/").reverse();
+        var t = [data[1], data[2]].reverse();
+        data[1] = t[0];
+        data[2] = t[1];
+        data = data.join('_');
+    }
 
     var log_path = path + data + '.log'
 
@@ -712,7 +714,7 @@ app.get('/getLog', function(request, response) {
             })
         } else {
             var res = [];
-            var t = data.split('\r\n')
+            var t = data.split('\n')
 
             t.forEach(line => {
 

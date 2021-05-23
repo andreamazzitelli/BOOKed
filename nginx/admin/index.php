@@ -289,7 +289,7 @@
             success: function(result) {
                 var splitjoin1 = result.log;
                 var splitjoin2 = splitjoin1.toString();
-                var splitjoin3 = splitjoin2.split(';');
+                var splitjoin3 = splitjoin2.split(';,');
                 var splitjoin4 = splitjoin3.join('<br>');
                 $('#result-log').html(splitjoin4);
             },
