@@ -54,9 +54,8 @@
                 <li>una mail gmail e la rispettiva password per le app (<a href="https://support.google.com/accounts/answer/185833?hl=it" target=”_blank”>Tutorial per Creare Password per App</a>)</li>
             </ul>
             </br>
-            Verificare che i seguenti file abbiano i permessi di esecuzione:
+            Verificare che i seguenti file abbiano i permessi di esecuzione (utilizzare <code>chmod</code> per assegnarli):
             <ul>
-                <li> server/server.js</li>
                 <li> server/wait_for_it.sh</li>
                 <li> server/initialize.sh</li>
                 <li>consumer/wait_for_it.sh</li>
