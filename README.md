@@ -8,8 +8,8 @@
     <li>
         <p><b>ARCHITETTURA DI RIFERIMENTO E TECNOLOGIE UTILIZZATE</b></p>
         <p>Il progetto è basato sull'idea di aggregazione di microservizi. Per raggiungere questo obiettivo abbiamo utilizzato docker (in particolare docker compose) sfruttando più container per inizializzare una serie di servizi base seperati che poi interagiscono tra loro per fornire poi il servizio finale.
-            <img src= "Schema_Architettura.png" width="75%">
         </p>
+        <img src= "Schema_Architettura.png" width="75%">
     </li>
     <li>
         <p><b>SODDISFACIMENTO DEI REQUISITI</b></p>
