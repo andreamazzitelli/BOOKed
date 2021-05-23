@@ -71,7 +71,7 @@
             </br>
             <b>N.B.</b>
             Poichè il certificato utilizzato per il funzionamento di ssl è self-signed potrebbe essere necessario autorizzare l'accesso sia ad nginx sia al server node.
-            Per il corretto funzionamento si consiglia di visitare e autorizzare l'accesso ai seguenti link (per utenti mac è necessario inserire il certificato server/openssl/cert.crt nel portachiavi come indicato in questa quida <a href="https://support.apple.com/guide/keychain-access/add-certificates-to-a-keychain-kyca2431/mac" target="_blank">Guida per Aggiungere Certificato su Mac</a> e saltare questo passaggio)
+            Per il corretto funzionamento si consiglia di visitare e autorizzare l'accesso ai seguenti link (per utenti mac è necessario inserire il certificato server/openssl/cert.crt nel portachiavi come indicato in questa quida <a href="https://support.apple.com/guide/keychain-access/add-certificates-to-a-keychain-kyca2431/mac" target=”_blank”>Guida per Aggiungere Certificato su Mac</a> e saltare questo passaggio)
             <ul>
                 <li><a href="https://localhost:3000/general?address=piazzale+aldo+moro+roma" target="_blank">Autorize Application Server</a> </li>
                 <li><a href="https://localhost" target="_blank">Autorize Web Server</a></li>
