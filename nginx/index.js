@@ -281,7 +281,7 @@ $(document).ready(function() {
 
 
     //SetLocalStorage
-    showDiv() //forse si può mettere in una posizione migliore
+    showDiv() 
     $('#ok').click(function() {
         const element = document.querySelector('.animatebutton');
         element.classList.add('animated', 'pulse');
@@ -299,13 +299,13 @@ $(document).ready(function() {
         $('#hidden_card').fadeOut(400);
     });
 
-    function setLocal() {
+    function setLocal() {//funzione che setta il localStorage
         if (document.getElementById('address').value != '') {
             localStorage['last_origin'] = document.getElementById('address').value;
         }
     }
 
-    function setOrigin() { //funzione che quando appare 
+    function setOrigin() { //funzione che fa apparire il contenuto nel box
         if (localStorage['last_origin'] != null) {
             document.getElementById('address').setAttribute('value', localStorage['last_origin']);
         }
@@ -314,7 +314,7 @@ $(document).ready(function() {
     function showDiv() {
         if (localStorage['last_origin'] != null) {
             document.getElementById('paragraph').innerHTML = localStorage['last_origin']
-            document.getElementById('hidden_card').style.display = 'block' //solo per test da cambiare ma non so come
+            document.getElementById('hidden_card').style.display = 'block' 
         }
     }
 
