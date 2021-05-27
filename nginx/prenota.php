@@ -17,7 +17,7 @@ function renderForm($nomeluogoritiro, $indirizzoritiro, $nomelibro, $autorelibro
     <link rel="stylesheet" type="text/css" href="font/flaticon.css" />
     <script src="autocomplete.js"></script>
     <style>
-        /* NON mi sembra necessario ma non saprei inoltre non so come sistemare la dimensione della tendina */
+        
         /*the container must be positioned relative:*/
         /*.autocomplete {
             position: relative;
