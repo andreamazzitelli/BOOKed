@@ -163,7 +163,7 @@ if (isset($_GET['id']) && $_GET['id'] != ''){
 </html>
 
 <?php
-    }else{ //Come caBBo sei arrivato fin qui? VIA! Pt. 1
+    }else{ 
     ?>
         <script type="text/javascript">
             window.location.href = 'index.html';
@@ -171,7 +171,7 @@ if (isset($_GET['id']) && $_GET['id'] != ''){
     <?php
     }
 } else {
-    //Come caBBo sei arrivato fin qui? VIA! Pt. 2
+    
 ?>
     <script type="text/javascript">
         window.location.href = 'index.html';
