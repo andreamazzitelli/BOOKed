@@ -99,7 +99,7 @@
 <div>
 <h2>NOTA BENE</h2>
     <p>
-        All'interno del progetto per sincronizzare l'accenzione di alcuni container viene utilizzato lo script bash "wai-for-it.sh" come consigliato dalla guida ufficiale docker         al link:<a href="https://docs.docker.com/compose/startup-order/" target="_blank">Control startup and shutdown order in Compose</a>. Tutti i diritti sono quindi                   riservati all'autore <b>vishnubob</b> (repository github con il codice <a href="https://github.com/vishnubob/wait-for-it" target="_blank"> vishnubob/wait-for-it</a>
+        All'interno del progetto per sincronizzare l'accenzione di alcuni container viene utilizzato lo script bash "wait-for-it.sh" come consigliato dalla guida ufficiale docker         al link:<a href="https://docs.docker.com/compose/startup-order/" target="_blank">Control startup and shutdown order in Compose</a>. Tutti i diritti sono quindi                   riservati all'autore <b>vishnubob</b> (repository github con il codice <a href="https://github.com/vishnubob/wait-for-it" target="_blank"> vishnubob/wait-for-it</a>)
     </p>
 </div>
 <p>
