@@ -5,7 +5,7 @@ function producer(messaggio) {
 
     amqp.connect('amqp://rabbitmq', function(error0, connection) {
         if (error0) {
-            //throw error0; //sostituisci con chiamata ad una funzione che "gestisce" l'erroe e poi richiama producer e dopo averla chiama fai return
+            //throw error0; 
             console.log("Sistema di Log NON Funzionante " + error0.toString());
             return;
         }
