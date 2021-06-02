@@ -98,7 +98,7 @@ define({
             "url": "/specific",
             "title": "",
             "name": "GetRealDistanceAndTime",
-            "group": "Ditance_and_Time_Calculation",
+            "group": "Distance_and_Time_Calculation",
             "version": "0.1.0",
             "parameter": {
                 "fields": {
@@ -193,7 +193,7 @@ define({
                 }]
             },
             "filename": "Test_Apidoc/apidoc.js",
-            "groupTitle": "Ditance_and_Time_Calculation"
+            "groupTitle": "Distance_and_Time_Calculation"
         },
         {
             "type": "get",
