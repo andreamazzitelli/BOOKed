@@ -17,7 +17,7 @@ const logger = require('./logger_functions');
 var app = express();
 app.use(express.json());
 
-//Sarà pure deprecato ma io con expressjson non riesco quindi lo metto lo stesso :(
+
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -33,12 +33,6 @@ var MAP_SERVICES_NAME = parsed_config.MAP_SERVICES_NAME;
 var list_cities = parsed_config.list_of_cities;
 var default_city = parsed_config.default_city;
 var keyfromconfig = parsed_config.chiave;
-
-/* var NUM_OF_PLACES = 3;
-var DB_NAME = 'CouchDB';
-var MAP_SERVICES_NAME = 'GraphHopper';
-var list_cities = ['roma']
-var default_city = 'roma' */
 
 function error_handler(error, sender_ip, response) {
 
@@ -61,7 +55,7 @@ function error_handler(error, sender_ip, response) {
 
     } else {
         //console.log('CASO SPECIALE');
-        logger.producer('[CASO SPECIALE];') //devo inventarmi una dicitura carina
+        logger.producer('[CASO SPECIALE];') 
         response.send(JSON.stringify({ "service_status": "FAIL_TO_LOCATE" }));
     }
 
@@ -102,7 +96,7 @@ function distance(lat1, lon1, lat2, lon2) {
         distance = distance * 60 * 1.1515;
         distance = distance * 1.609344;
 
-        //Approssima alla terza cifra decimale così km --> m è facile
+        //Approssima alla terza cifra decimale così km --> m 
         return Math.round(distance * 1000) / 1000
     }
 }
@@ -123,7 +117,7 @@ function sorter(array) {
     return array.sort(function(a, b) { return a[1].toString().localeCompare(b[1]); })
 }
 
-function turn_into_json_1(body, lat, long) { //devo pensare ad un modo migliore che _1 e _2
+function turn_into_json_1(body, lat, long) { 
 
     var template = {
         "service_status": "OK",
@@ -211,8 +205,8 @@ function post_setup(response_json) {
 //chiamata alla direction matrix
 async function direction_matrix_call(setup) {
 
-    var check = false; //per il momento il controllo dell'errore sono riuscito a farlo funzionare così è un metodo orrido ma per il 
-    var temp; //momento mi accontento 
+    var check = false; 
+    var temp;
 
     var result = await fetch('https://graphhopper.com/api/1/matrix?&key=' + process.env.GRAPHHOPPER_KEY, setup)
         .then(res => {
@@ -291,7 +285,7 @@ function inFormaAMPM(time) {
 //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
 //APP API initialize serve
 //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
-app.get('/general', function(req, response_api) { //da definire meglio il nome dell'api
+app.get('/general', function(req, response_api) { 
     response_api.setHeader('Access-Control-Allow-Origin', '*');
     console.log('HO RICEVUTO ' + req.query.address);
     var location_not_formatted = req.query.address;
@@ -313,9 +307,9 @@ app.get('/general', function(req, response_api) { //da definire meglio il nome d
 
             //Gestione errore: indirizzo non trovato
             //La chiamata è andata bene ma graphhopper non riesce a localizzare l'utente
-            if (info_location_api.hits == '') { //da sistemare poi in base alla mappa, metterò un json
+            if (info_location_api.hits == '') { 
                 //console.log('Gestione errore: indirizzo non trovato');
-                logger.producer('[CASO SPECIALE];') //devo inventarmi una dicitura carina
+                logger.producer('[CASO SPECIALE];') 
                 response_api.send(JSON.stringify({ "service_status": "FAIL_TO_LOCATE" }));
 
 
@@ -396,7 +390,7 @@ app.post('/specific', function(request, response_api) {
             return res.json();
         })
         .then(res => { return post_setup(res) })
-        .then(res => { //mi conviene metterlo in una funzione?? non saprei
+        .then(res => { 
 
             origin = res[0];
             destinations = res[1];
@@ -411,7 +405,7 @@ app.post('/specific', function(request, response_api) {
         })
         .then(res => { return direction_matrix_call(res) })
         .then(res => {
-            if (res[0] == 'ERRORE') { //questo è il controllo dell'errore da questo lato
+            if (res[0] == 'ERRORE') { 
 
                 var obj = {
                     status: '',
@@ -446,7 +440,7 @@ app.get('/gcalendar/login', function(req, res) {
     let secret;
 
     try {
-        secret = fs.readFileSync('secrets.json'); //gestire meglio questo secret
+        secret = fs.readFileSync('secrets.json'); 
     } catch (error) {
         console.log(error);
 
@@ -664,7 +658,7 @@ app.get('/getLog', function(request, response) {
 
     response.setHeader('Access-Control-Allow-Origin', '*');
 
-    var path = "./share_folder/"; //path da aggiustare
+    var path = "./share_folder/"; 
 
     var data = request.query.data;
     var da = request.query.da;
@@ -688,7 +682,7 @@ app.get('/getLog', function(request, response) {
     daSeconds = getSeconds(da);
     aSeconds = getSeconds(a);
 
-        /*     console.log(daSeconds);
+        /*console.log(daSeconds);
         console.log(aSeconds); */ 
 
     if (typeof data == 'undefined') {
