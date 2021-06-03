@@ -17,7 +17,7 @@ const logger = require('./logger_functions');
 var app = express();
 app.use(express.json());
 
-
+//
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -33,6 +33,7 @@ var MAP_SERVICES_NAME = parsed_config.MAP_SERVICES_NAME;
 var list_cities = parsed_config.list_of_cities;
 var default_city = parsed_config.default_city;
 var keyfromconfig = parsed_config.chiave;
+
 
 function error_handler(error, sender_ip, response) {
 
@@ -62,7 +63,7 @@ function error_handler(error, sender_ip, response) {
 }
 
 //Definizione di tutte le funzioni che verranno richiamate dopo
-function extract(json_obj, number) { //versione che permette di scegliere solo un tot numero di posti
+function extract(json_obj, number, origin) { //versione che permette di scegliere solo un tot numero di posti
     var location_array = [];
     var location_list = json_obj.lista;
 
@@ -74,9 +75,60 @@ function extract(json_obj, number) { //versione che permette di scegliere solo u
         requested = number;
     }
 
-    for (var i = 0; i < requested; i++) {
+    for (var i = 0; i < location_list.length; i++) {//creo array base 
         location_array.push([location_list[i].name, parseFloat(location_list[i].lat), parseFloat(location_list[i].long), location_list[i].via])
     }
+
+    if(requested != location_list.length){ //gestisco il caso in cui mi venga dato un numero limite
+        var sorted = sorter(location_array)
+        var position; //indice da dove iniziare a prendere elementi che poi restituisco
+        var result = [];
+
+        //faccio stima di vicinaza al punto considerando la latitudine
+
+        if(origin>sorted[sorted.length-1][1]){ //se lat di origin maggiore allora prendo sicuramente gli ultimi number luoghi
+            position = sorted.length
+            for(var i = 0; i<number; i++){
+                result.push(sorted[position-i]);
+            }
+            return result;
+        }
+
+        if(origin<sorted[0]){ //se lat di origin maggiore allora prendo sicuramente i primi number luoghi
+            position = 0;
+            for(var i=0; i<number; i++){
+                result.push(sorted[position+i]);
+            }
+            return result;
+        }
+
+        for(var i = 0; i<sorted.length; i++){ // se lat di origin è "in mezzo" alle lat dei luoghi trovo la position da cui partire
+            if(sorted[i][1]>origin){
+                position = i;
+                break;
+            }
+        }
+
+        for(var i=0; i<((number/2));i++){ //trovata la posizione prelevo i luoghi più vicini uno a dx l'altro a sx
+            
+            if(position+i<location_list.length){
+                result.push(location_array[position+i])
+            }
+            if(position-i>0 && position-i-1>=0){
+                result.push(location_array[position-i-1])
+            }
+        }
+        
+        result = sorter(result) //li riorganizzo in modo che poi posso eliminare il più lontano
+        
+        if(result.length>number){ //se l'array risultato supera il valore richiesto elimino l'ultimo luogo
+            result.pop();           //(non supererà mai più di 1 perchè vanno a coppie)
+        }
+
+        return result;
+
+    }
+
     return location_array;
 }
 
@@ -205,8 +257,8 @@ function post_setup(response_json) {
 //chiamata alla direction matrix
 async function direction_matrix_call(setup) {
 
-    var check = false; 
-    var temp;
+    var check = false;  
+    var temp; 
 
     var result = await fetch('https://graphhopper.com/api/1/matrix?&key=' + process.env.GRAPHHOPPER_KEY, setup)
         .then(res => {
@@ -261,7 +313,7 @@ function getSeconds(time) {
     var splitime = splitString[0].split(':');
     var seconds = parseInt(splitime[0]) * 60 * 60 + parseInt(splitime[1] * 60) + parseInt(splitime[2])
 
-    if (splitString[1] == 'PM') {
+    if (time.includes("PM")) {
         seconds += 12 * 60 * 60;
     }
 
@@ -270,7 +322,6 @@ function getSeconds(time) {
 
 function inFormaAMPM(time) {
     var splitString = time.split(':');
-
     if (parseInt(splitString[0]) > 12) {
         splitString[0] = parseInt(splitString[0]) - 12;
         return splitString.join(':') + " PM"
@@ -327,7 +378,7 @@ app.get('/general', function(req, response_api) {
                             return res.json();
                         }
                     })
-                    .then(res => { return extract(res, number) })
+                    .then(res => { return extract(res, number, lat_user) })
                     .then(res => { return from_point_to_location(res, lat_user, lng_user) })
                     .then(res => { return sorter(res) })
                     .then(res => { return turn_into_json_1(res, lat_user, lng_user) })
@@ -405,7 +456,7 @@ app.post('/specific', function(request, response_api) {
         })
         .then(res => { return direction_matrix_call(res) })
         .then(res => {
-            if (res[0] == 'ERRORE') { 
+            if (res[0] == 'ERRORE') { //questo è il controllo dell'errore
 
                 var obj = {
                     status: '',
@@ -712,7 +763,7 @@ app.get('/getLog', function(request, response) {
 
             t.forEach(line => {
 
-                var time = getSeconds(line.substring(0, 9))
+                var time = getSeconds(line.substring(0, 10))
                     //console.log(time)
                 if (aSeconds > time && daSeconds <= time) {
                     res.push(line);
